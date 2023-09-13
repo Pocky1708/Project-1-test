@@ -1,4 +1,4 @@
-name: CI
+uname: CI
 on:
   push:
     branches: [ main ]
@@ -32,7 +32,7 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          command: buildozer android logcat
+          command: buildozer android debug deploy logcat
           buildozer_version: stable
 
       - name: Upload artifacts
